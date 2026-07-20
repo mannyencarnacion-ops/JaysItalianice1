@@ -1,0 +1,18 @@
+# Security headers for all responses
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+# Images are stable content but filenames are NOT content-hashed —
+# cache for a week, never "immutable" (see ShopMora caching lessons).
+/assets/*
+  Cache-Control: public, max-age=604800
+
+# Un-hashed CSS/JS: revalidate every load so deploys are never invisible.
+# ETag makes this a cheap 304.
+/styles.css
+  Cache-Control: public, max-age=0, must-revalidate
+/site.js
+  Cache-Control: public, max-age=0, must-revalidate

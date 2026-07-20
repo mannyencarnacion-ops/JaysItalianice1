@@ -1,0 +1,16 @@
+# Shopify → Cloudflare Pages migration redirects
+# Jay's is a one-page brochure site; fold old Shopify system paths back to home.
+/cart            /            301
+/cart/*          /            301
+/checkout        /            301
+/checkouts/*     /            301
+/account         /            301
+/account/*       /            301
+/collections     /#flavors    301
+/collections/*   /#flavors    301
+/products        /#flavors    301
+/products/*      /#flavors    301
+/pages/*         /            301
+/policies/*      /            301
+/blogs/*         /            301
+/apps/*          /            301
