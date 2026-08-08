@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jaysitalianice1.com/sitemap.xml
+Sitemap: https://cooljaysitalianice.com/sitemap.xml
